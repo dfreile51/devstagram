@@ -67,10 +67,6 @@
 
     <section class="container mx-auto mt-10">
         <h2 class="text-4xl text-center font-black my-10">Publicaciones</h2>
-        @if ($posts->count())
-            <x-listar-post :posts="$posts" />
-        @else
-            <p class="text-center uppercase font-semibold text-slate-500">No Hay Posts</p>
-        @endif
+        <x-listar-post :posts="$posts" />
     </section>
 @endsection
