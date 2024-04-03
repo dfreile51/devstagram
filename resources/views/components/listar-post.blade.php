@@ -9,6 +9,5 @@
             @endforeach
         </div>
     @else
-        <p class="text-center">No Hay Posts, sigue a alguien para poder mostrar sus posts</p>
     @endif
 </div>
