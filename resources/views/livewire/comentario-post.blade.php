@@ -4,8 +4,11 @@
             <p class="text-xl font-bold text-center mb-4">Agrega un Nuevo Comentario</p>
 
             @if (session('mensaje'))
-                <div class="bg-green-500 p-2 rounded-lg mb-6 text-white text-center uppercase font-bold">
-                    <span>{{ session('mensaje') }}</span>
+                <div x-data="{ open: true }">
+                    <div x-init="setTimeout(() => open = false, 3000)" x-show="open" x-transition.duration.300ms
+                        class="bg-green-500 p-2 rounded-lg mb-6 text-white text-center uppercase font-bold">
+                        <span>{{ session('mensaje') }}</span>
+                    </div>
                 </div>
             @endif
 
